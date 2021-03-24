@@ -1,41 +1,44 @@
-<!DOCTYPE html>
-<html lang="eng">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta http-epuiv="X-UA-Compatible" content="ie=edge">
-    <script defer src="form.js"></script>
-    <link rel="stylesheet" href="form.css">
-</head>
-<body>
-    <div id="container">
-        <div id="heading">
-            Details Form
+<html>
+    <head>
+        <title>Details Form</title>
+        <link rel="stylesheet" href="form.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    </head>
+    <body>
+        
+
+	<form name="form">
+        <h2 id="heading">Details Form</h2>
+
+	<hr class="h"><br>
+		<label class="labels">Name :</label>
+		<input type="text" name="name" id="name" required><br>
+
+		<label class="labels">Mob. No. :</label>
+		<input type="number" name="num" id="num" required><br>
+
+		<label class="labels">Email ID : </label>
+		<input type="email" name="email" id="email" required><br>
+        <div class="text-center">
+            <button type="submit" class="button button1" form="form" onclick="add()">Submit</button>
         </div>
-        <form id="form" onsubmit="return validateform()">
-            <label id="name1">Name : </label>
-            <input type="text" id="name" name="name" placeholder="Name" required>
-            <br>
-            <label>Mob.No. :</label>
-            <input type="text" id="number" name="number" placeholder="Mobile No." required>
-            <br>
-            <label>Email ID :</label>
-            <input type="text" id="email" name="email" placeholder="Email" required>
-            <br>
-            <button type="submit" id="btn">Submit</button>
-        </form>
-        <hr>
-        <div id="text">
-            <table id="table">
-                <tr>
-                    <th>Name</th>
-                    <th>Mob. No.</th>
-                    <th>Email Id</th>
-                </tr>
-            </table>
-        </div>
-    </div>
-</table>
-</form>
-</body>
+
+	<hr>
+
+	<table style="display: none;" id="info">
+		<tr class="headers">
+			<th id="nameheader">Name</th>
+			<th id="numheader">Mob. No.</th>
+			<th id="emailheader">Email ID</th>
+			<th id="deleteheader"></th>
+		</tr>
+	</table>
+</form><br>
+        <script src="form.js"></script>
+    </body>
 </html>
+
